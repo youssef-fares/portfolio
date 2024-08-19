@@ -126,6 +126,10 @@ h1 {
   padding: 20px 0 30px 0px;
 }
 
+.imgPic {
+  margin-bottom: 6px;
+}
+
 .info,
 .info2 {
   display: inline;
