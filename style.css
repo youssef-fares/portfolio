@@ -81,8 +81,7 @@ h1 {
   color: #f3f3f3;
   height: 100vh;
   margin: 0;
-  /* padding: 0; */
-  /* padding-bottom: 100px; */
+
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -101,9 +100,6 @@ h1 {
 /* ABOUT */
 
 .about {
-  /* height: 100vh; */
-  /* background-color: #f5f7f1; */
-  /* background: linear-gradient(#dadfe6e7, #fff); */
   background: #f3f3f3;
 }
 
