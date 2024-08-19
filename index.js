@@ -30,17 +30,18 @@ function sendEmail() {
             data: e.target.result.split("base64,")[1], // Attach the base64 data
           },
         ],
-      }).then((message) => {
-        if (message == "OK") {
-          Swal.fire({
-            icon: "success",
-            iconColor: "rgb(187, 165, 61)",
-            title: "Your message has been sent",
-            showConfirmButton: false,
-            timer: 2500,
-          });
-        }
       });
+      // .then((message) => {
+      //   if (message == "OK") {
+      //     Swal.fire({
+      //       icon: "success",
+      //       iconColor: "rgb(187, 165, 61)",
+      //       title: "Your message has been sent",
+      //       showConfirmButton: false,
+      //       timer: 2500,
+      //     });
+      //   }
+      // });
     };
 
     reader.readAsDataURL(file); // Read the file as a data URL (base64 encoded)
@@ -55,17 +56,18 @@ function sendEmail() {
       From: "youssef.fares89@gmail.com",
       Subject: subject.value,
       Body: bodyMessage,
-    }).then((message) => {
-      if (message == "OK") {
-        Swal.fire({
-          icon: "success",
-          iconColor: "rgb(187, 165, 61)",
-          title: "Your message has been sent",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-      }
     });
+    // .then((message) => {
+    //   if (message == "OK") {
+    //     Swal.fire({
+    //       icon: "success",
+    //       iconColor: "rgb(187, 165, 61)",
+    //       title: "Your message has been sent",
+    //       showConfirmButton: false,
+    //       timer: 2500,
+    //     });
+    //   }
+    // });
   }
 }
 
@@ -130,6 +132,14 @@ form.addEventListener("submit", (e) => {
     !subject.classList.contains("error") &&
     !mess.classList.contains("error")
   ) {
+    Swal.fire({
+      icon: "success",
+      iconColor: "rgb(187, 165, 61)",
+      title: "Your message has been sent",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+
     sendEmail();
 
     setTimeout(function () {
